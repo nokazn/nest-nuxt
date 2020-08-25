@@ -10,6 +10,9 @@
     "strict": true,
     "outDir": "./dist/server",
     "baseUrl": "../",
+    "paths": {
+      "nuxt": ["types/nuxt.d.ts"]
+    },
     "incremental": true
   },
   "exclude": ["node_modules", "dist", "client"]
