@@ -1,0 +1,16 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "strict": true,
+    "outDir": "./dist/server",
+    "baseUrl": "../",
+    "incremental": true
+  },
+  "exclude": ["node_modules", "dist", "client"]
+}
