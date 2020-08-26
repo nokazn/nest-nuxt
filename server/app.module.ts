@@ -7,7 +7,7 @@ import { AppService } from './app.service';
   imports: [],
   controllers: [
     AppController,
-    NuxtController //Put this at the last, so that Nest will check for all other controller first before going to Nuxt
+    NuxtController, //Put this at the last, so that Nest will check for all other controller first before going to Nuxt
   ],
   providers: [AppService],
 })

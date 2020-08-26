@@ -8,10 +8,10 @@
     "experimentalDecorators": true,
     "sourceMap": true,
     "strict": true,
-    "outDir": "./dist/server",
+    "outDir": "../dist/server",
     "baseUrl": "../",
     "paths": {
-      "nuxt": ["types/nuxt.d.ts"]
+      // "nuxt": ["./types/nuxt.d.ts"]
     },
     "incremental": true
   },

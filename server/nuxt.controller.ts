@@ -1,7 +1,8 @@
 import { Controller, Get, Request, Response } from '@nestjs/common';
-import { Builder, Nuxt } from 'nuxt';
+// @ts-ignore @todo
+import { Nuxt, Builder } from 'nuxt';
 
-import { config } from '../nuxt.config.js';
+import { config } from '../nuxt.config';
 
 @Controller()
 export class NuxtController {
@@ -12,13 +13,12 @@ export class NuxtController {
     if (process.env.mode === 'production') {
       config.dev = false;
     } else if (process.env.IS_NUXT_ENABLED) {
-      this.nuxt = new Nuxt(config);
+      // this.nuxt = new Nuxt(config);
       new Builder(this.nuxt).build();
     }
   }
-
   @Get('*')
-  async root(@Request() req, @Response() res) {
+  async root(@Request() req: any, @Response() res: any) {
     if (this.nuxt) {
       await this.nuxt.render(req, res);
     } else {
